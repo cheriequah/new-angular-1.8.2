@@ -14,30 +14,16 @@
 </table>
 -->
 
-<div id="container" ng-app="event_list"  ng-controller="event_list_ctrl">
+<div class="content" ng-app="event_list"  ng-controller="myCtrl">
     <div class="row" ng-repeat="data in image">
         <div class=".col-sm-6 .col-md-5 .col-lg-6" style="background-color:#eee;height:150px;width:500px;margin-left:240px;margin-top:20px;">
             <h4 style="padding:10px;">User Say's</h4><hr>
-            <p style="padding:10px;">
-              This is a Demo feed. It is developed to demonstrate Two way data binding.
-            </p>
-            <img src="{{data.image}}" class="img-circle" style="width:100px;height:100px;margin-left:-140px;margin-top:-130px;">
+            <p id="id" style="padding:10px;"></p>
+            <p id="demo"></p>
+            <img src="" class="img-circle" style="width:100px;height:100px;margin-left:-140px;margin-top:-130px;">
           </div>  
     </div>
 </div>
 
-<script>
-    app.controller('event_list_ctrl', function($scope, $http, $interval) {
-    load_image();
-    $interval(function() {
-        load_image();
-    }, 300);
-    
-    function load_image() {
-        $http.get('http://localhost:4200/load').success(function(data) {
-            $scope.image = data;
-        });
-    }; 
-});
+<script src="/core.js" ></script>
 
-</script>

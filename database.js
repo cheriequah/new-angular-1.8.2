@@ -53,10 +53,12 @@ app.get("/event-list",(req, res) =>{
         res.send("Database Retrieved");
     });
 });
-*/
 
+app.use(express.static(__dirname + "/src"))
+*/
 app.get('/', function(req, res) {
-    res.sendFile('index.html')
+    //res.sendFile('index.html')
+    res.send("Hello")
 });
 
 app.get('/load', function(req, res) {
@@ -65,13 +67,24 @@ app.get('/load', function(req, res) {
             console.log("Problem with MYSQL" + err);
         }
         else {
-            res.end(JSON.stringify(rows));
+            //res.end(JSON.stringify(rows));
+            res.json({
+                events: rows
+            });
+            for (let i=0; i<rows.length; i++) {
+                console.log(rows[i].id);
+                console.log(rows[i].title);
+                document.getElementById("id").innerHTML = rows[i].id
+                document.getElementById("demo").innerHTML = rows[i].title
+            }
+            
+
         }
     });
 });
 
-app.listen('4200', () => {
+app.listen('3000', () => {
     console.log('Server started on port 4200')
 })
 
-//module.exports = db;
+module.exports = db;
