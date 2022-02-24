@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { EventComponent } from './components/event/event.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TicketComponent } from './components/ticket/ticket.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ShowTicketInfoComponent } from './components/showticketinfo/showticketinfo.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, TicketComponent, EventComponent
+    AppComponent, HeaderComponent, TicketComponent, EventComponent, CheckoutComponent, ShowTicketInfoComponent
   ],
   imports: [
     BrowserModule,

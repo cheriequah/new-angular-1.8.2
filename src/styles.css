@@ -25,6 +25,154 @@
     margin: 0;
   }
 
+  /* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.center_container {
+    width: 400px;
+    height: 360px;
+    margin: 30px auto auto;
+    padding: 100px 50px;
+    background-color: #CCE6F4;
+    border-radius: 10px;
+}
+
+.lbl_title {
+    width: 220px;
+    height: 30px;
+    margin: 10px;
+    color: #193A4C;
+    font-weight: 700;
+}
+
+.evt_name {
+    width: 100%;
+    height: 30px;
+    margin: 10px;
+    color: #3C6981;
+    font-weight: 500;
+}
+
+.counter_container {
+    width: 100%;
+    height: 80px;
+    margin: 30px 0;
+}
+
+.ticket_left {
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+}
+
+.counter {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin: auto;
+}
+
+.small_btn {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    background-color: #A0B8C5;
+    color: #253F4C;
+}
+
+.small_btn:hover {
+    background-color: #708693;
+    color: black;
+}
+
+.ticket_count {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    font-weight: 500;
+    color: #0A222F;
+}
+
+.checkout_btn {
+    width: 130px;
+    height: 50px;
+    margin: 100px 140px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #A0B8C5;
+    color: #253F4C;
+}
+
+.checkout_btn:hover {
+    background-color: #708693;
+    color: black;
+}
+
+.event_name {
+    width: 380px;
+    height: 40px;
+    margin: 10px;
+    color: #3C6981;
+    font-weight: 500;
+}
+
+.count_info {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    margin-left: 190px;
+    font-weight: 500;
+    color: #0A222F;
+}
+
+.price_container {
+    width: 100%;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.ticket_price {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-left: 160px;
+    font-weight: 500;
+    color: #0A222F;
+}
+
+
+.buy_btn {
+    width: 130px;
+    height: 50px;
+    margin: 60px 140px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #A0B8C5;
+    color: #253F4C;
+}
+
+.buy_btn:hover {
+    background-color: #708693;
+    color: black;
+}
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
     
