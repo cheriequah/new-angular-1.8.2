@@ -1,14 +1,53 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { EventModelServer } from 'src/app/model/event.model';
+import { Router } from '@angular/router';
+
+//import { EventModelServer } from 'src/app/model/event.model';
+
+export class Event {
+  constructor(
+    public id: number,
+    public title: string,
+    public description: string,
+    public ticketBal: number,
+    public price: number,
+    public dateTime: string,
+    public location: string,
+    public image: string
+  ) {}
+}
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent {
-  public name = "";
+export class EventComponent implements OnInit {
+  events: any;
+  Event = [];
+  constructor(
+    private httpClient: HttpClient,
+
+  ){}
+
+  ngOnInit(): void {
+    this.getEvents();
+  }
+
+  getEvents() {
+    this.httpClient.get('http://localhost:3000/load').subscribe(response => {
+      console.log(response);
+      this.events = response;
+      this.Event = this.events.event;
+    })
+  }
+
+  //when user click the event navigate to the url
+  //selectEvent(id:number) {
+    //this.router.navigate(['checkout', id]).then();
+  //}
+  
+  /*
   events: EventModelServer[] = [
     {
       "id":1,
@@ -31,7 +70,7 @@ export class EventComponent {
       "image":"https://www.teamlab.art/images/pc-l/14591"
     }
   ]
-/*
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {

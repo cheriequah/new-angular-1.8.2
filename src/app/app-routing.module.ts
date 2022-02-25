@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ShowTicketInfoComponent
   },
   {
-    path: 'checkout',
+    path: 'checkout/:id',
     component: CheckoutComponent
   }
   

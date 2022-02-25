@@ -1,8 +1,25 @@
 
-    <body>
-        <div class="center_container">
+
+        <div class="center_container_checkout" >
             <label class="lbl_title">Event name</label>
-            <p class="evt_name">the event name</p><!--event name-->
+            <p class="evt_info"></p><!--event name-->
+
+            <label class="lbl_title">Date and Time</label>
+            <p class="evt_info">20-Feb-2022 12:00 PM</p><!--event date and time-->
+
+            <label class="lbl_title">Venue</label>
+            <p class="evt_info"></p><!--event venue-->
+
+            <label class="personal_details">Personal Details</label>
+
+            <label class="lbl_title">Name</label>
+            <input type="text" class="customer_info" required placeholder="Enter your name"/><!--customer name-->
+
+            <label class="lbl_title">Email</label>
+            <input type="email" class="customer_info" required placeholder="Email"/><!--customer email-->
+
+            <label class="lbl_title">Confirm email</label>
+            <input type="email" class="customer_info" required placeholder="Confirm email"/><!--confirm email-->
             
             
             <div class="counter_container">
@@ -10,18 +27,21 @@
                     <label class="lbl_title">Ticket count</label>
                 </div>
                 <div class="counter">
-                    <button class="small_btn" id="minus_btn">
-                    -
-                    </button>
-                    <label class="ticket_count" id="ticket_count">0</label>
-                    <button class="small_btn" id="add_btn">
-                    +
-                    </button>
+                    <div ng-app="counterTicket" ng-controller="counterCtrl as $ctrl">
+                        <button ng-click="$ctrl.minus()" ng-disabled="$ctrl.zero()" class="small_btn" id="minus_btn">
+                        -
+                        </button>                        
+                        <label class="ticket_count" id="ticket_count">0</label>
+                        <!--label class="ticket_count" id="ticket_count">{{counterCtrl.count}}</label-->
+                        <button ng-click="$ctrl.add()" ng-disabled="$ctrl.max()" class="small_btn" id="add_btn">
+                        +
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <input type="submit" value="Checkout" name="checkout_btn" class="checkout_btn" />
         </div>
 
-        <script src="ticketcounter.js"></script>
-    </body>
+        <script src="app.js"></script>
+ 

@@ -5,7 +5,7 @@ app.controller('event_list_ctrl', function($scope, $http, $interval) {
     }, 300);
     
     function load_image() {
-        $http.get('http://localhost:4200/load').success(function(data) {
+        $http.get('http://localhost:3000/load').success(function(data) {
             $scope.image = data;
         });
     }; 

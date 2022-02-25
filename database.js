@@ -56,26 +56,28 @@ app.get("/event-list",(req, res) =>{
 
 app.use(express.static(__dirname + "/src"))
 */
+//default route
 app.get('/', function(req, res) {
     //res.sendFile('index.html')
     res.send("Hello")
 });
 
+//get all event list
 app.get('/load', function(req, res) {
     db.query("SELECT * FROM event", function(err, rows) {
         if(err) {
             console.log("Problem with MYSQL" + err);
         }
         else {
-            //res.end(JSON.stringify(rows));
-            res.json({
+            res.end(JSON.stringify(rows));
+            /*res.json({
                 events: rows
-            });
+            });*/
             for (let i=0; i<rows.length; i++) {
                 console.log(rows[i].id);
                 console.log(rows[i].title);
-                document.getElementById("id").innerHTML = rows[i].id
-                document.getElementById("demo").innerHTML = rows[i].title
+                //document.getElementById("id").innerHTML = rows[i].id
+                //document.getElementById("demo").innerHTML = rows[i].title
             }
             
 
@@ -83,6 +85,9 @@ app.get('/load', function(req, res) {
     });
 });
 
+//get event by id
+
+//set port
 app.listen('3000', () => {
     console.log('Server started on port 3000')
 })

@@ -1,2 +1,2 @@
-var app = angular.module('event_list', []);
+//var app = angular.module('event_list', []);
 
