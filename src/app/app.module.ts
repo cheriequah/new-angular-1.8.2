@@ -9,10 +9,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ShowTicketInfoComponent } from './components/showticketinfo/showticketinfo.component';
+import { FirstTimeComponent } from './components/register1sttimepayment/register1sttimepayment.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, TicketComponent, EventComponent, CheckoutComponent, ShowTicketInfoComponent
+    AppComponent, HeaderComponent, TicketComponent, EventComponent, CheckoutComponent, ShowTicketInfoComponent, FirstTimeComponent
   ],
   imports: [
     BrowserModule,
