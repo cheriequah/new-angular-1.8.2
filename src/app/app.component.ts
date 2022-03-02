@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent{
   title = 'new-angular-1.8.2';
 
+  /*
   constructor() { }  
     ngOnInit() {  
         this.loadJsFile("app.js");  
@@ -17,5 +18,5 @@ export class AppComponent{
         node.src = url;  
         node.type = 'text/javascript';  
         document.getElementsByTagName('head')[0].appendChild(node);  
-      }  
+      }  */
 }

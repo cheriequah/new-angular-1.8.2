@@ -30,6 +30,7 @@ import { Event } from "../components/event/event";
   private eventDataUrl = 'http://localhost:3000/load';
     constructor (private httpclient: HttpClient) {}
 
+    //To fetch the data from id
     getEvent(id: number): Observable<Event> {
       const url = `${this.eventDataUrl}/${id}`;
       return this.httpclient.get<Event>(url).pipe(

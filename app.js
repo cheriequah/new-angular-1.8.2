@@ -1,28 +1,28 @@
 //var app = angular.module('event_list', []);
 
-// counter script
 
-angular.module('counterTicket', []);
+var objEvent = [
+    {
+        Title:"",
+        Description:"",
+        TicketBal:"",
+        DateTime:"",
+        Location:"",
+        Image:"",
+    }
 
-angular.module('counterTicket')
-.controller('counterCtrl', function() {
+]
+//event functionality//
 
-  this.count = 0;
-  
-  this.minus = function() {
-    this.count = this.count - 1;
-  };
-  
-  this.add = function() {
-    this.count = this.count + 1;
-  };
-  
-  this.max = function() {
-    return this.count >= 100;
-  };
-  
-  this.zero = function() {
-    return this.count === 0;
-  };
-  
-});
+function onSubmit(){
+//retrieve input of data form //
+    var Title = document.getElementById(Title).value
+    var Description = document.getElementById(Description).value
+    var TicketBal = document.getElementById(TicketBal).value
+    var DateTime = document.getElementById(DateTime).value
+    var Location = document.getElementById(Location).value
+    var Image = document.getElementById(Image).value
+
+
+
+    }

@@ -4,7 +4,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { EventComponent } from './components/event/event.component';
 import { FirstTimeComponent } from './components/register1sttimepayment/register1sttimepayment.component';
 import { ShowTicketInfoComponent } from './components/showticketinfo/showticketinfo.component';
-import { TicketComponent } from './components/ticket/ticket.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -12,8 +12,8 @@ const routes: Routes = [
     component: EventComponent
   },
   {
-    path: 'ticketbooking',
-    component: TicketComponent
+    path: 'registerevent',
+    component: RegisterComponent
   },
   {
     path: 'ticketinfo',

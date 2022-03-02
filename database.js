@@ -30,7 +30,7 @@ app.get("/createdb",(req, res) =>{
 
 //Create Table
 app.get("/createevent",(req, res) =>{
-    let sql = "CREATE TABLE event(id INT AUTO_INCREMENT, title VARCHAR(255), description TEXT, ticketBal INT, dateTime DATETIME, location VARCHAR(255), image VARCHAR(255),node dat PRIMARY KEY(id))";
+    let sql = "CREATE TABLE event(id INT AUTO_INCREMENT, title VARCHAR(255), description TEXT, ticketBal INT, dateTime DATETIME, location VARCHAR(255), image VARCHAR(255), PRIMARY KEY(id))";
     db.query(sql, (err) => {
         if(err) {
             throw err
@@ -39,7 +39,13 @@ app.get("/createevent",(req, res) =>{
     });
 });
 
-
+app.post('/addevent', (req, res)=> {
+    db.query('INSERT INTO event(title, description, ticketBal, price, dateTime, location, image) VALUES (?,?,?,?,?,?,?)', [req.body.name, req.body.desciption, req.body.ticketBal, req.body.price, req.body.namedateTime, req.body.location, req.body.image], (err, result) => {
+        if (err)
+            throw err
+        res.status(201).send("User added with ID: ${result.title");
+    })
+})
 /*
 app.get("/event-list",(req, res) =>{
     let sql = "SELECT * FROM event";
@@ -59,7 +65,7 @@ app.use(express.static(__dirname + "/src"))
 //default route
 app.get('/', function(req, res) {
     //res.sendFile('index.html')
-    res.send("Hello")
+    res.send("test")
 });
 
 //get all event list

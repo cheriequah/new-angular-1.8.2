@@ -28,4 +28,20 @@ export class CheckoutComponent implements OnInit{
     .subscribe(event => this.event = event);
     console.log(this.event)
   }
+
+  count=1;
+
+  minus()
+  {
+    if (this.count > 0){
+      this.count = this.count - 1;
+    }
+  }
+
+  add()
+  {
+    if (this.count < 50){
+      this.count = this.count + 1;
+    }
+  }
 }
