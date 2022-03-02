@@ -17,6 +17,18 @@ db.connect(err =>{
 
 const app = express()
 
+app.post('/submit', function(req,res){
+    console.log(req,body);
+
+    var sql = "insert users value(null,'"+ req.body.title+"','"+req.body.description+"','"+req.body.ticketBal+"','"+req.body.dateTime+"','"+req.body.location+"','"+req.body.image+"')"
+    db.query(sql, function(err){
+        if (err) throw err
+        res.render('register', {title:"Data has been saved",
+        message:'Data is saved successful'})
+
+    })
+    db.end();
+})
 //Create Database
 app.get("/createdb",(req, res) =>{
     let sql = "CREATE DATABASE ticketmysql";

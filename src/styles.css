@@ -30,6 +30,10 @@
     text-decoration: none;  
 }
 
+.content input {
+    margin-left: 10px;
+}
+
 .row {
     background-color:#eee; 
     padding: 20px;

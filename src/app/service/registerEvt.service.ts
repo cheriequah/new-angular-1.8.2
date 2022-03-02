@@ -9,11 +9,11 @@ import { map } from "rxjs";
       
     constructor(private httpclient: HttpClient){}
 
-    url = "http://localhost:3000/addevent";
+    url = "http://localhost:3000/submit";
     rootUrl = "http://localhost:3000/";
 
     registerEvent(data: any) {
-        return this.httpclient.post(this.rootUrl, data);
+        return this.httpclient.post(this.url, data);
     }
 /*
     //Register Event
