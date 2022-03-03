@@ -33,7 +33,7 @@ export class CheckoutComponent implements OnInit{
 
   minus()
   {
-    if (this.count > 0){
+    if (this.count > 1){
       this.count = this.count - 1;
     }
   }
